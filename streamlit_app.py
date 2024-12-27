@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('🤖 Machine Learning Prediction App')
 
@@ -70,16 +71,19 @@ def target_encoder(value):
 
 y = y_raw.apply(target_encoder)
 
+input_row = df_penguins[:1]
+
 with st.expander('Input Features'):
   st.write('**Input Features of the Penguin**')
   input_df
 
 with st.expander('Encoded Values'):
   st.write('**Encoded Input Values**')
-  df_penguins[:1]
+  input_row
   st.write('**Encoded y**')
   y
 
+classifier = RandomForestClassifier()
+classifier.fit(X_raw, Y)
 
-
-
+prediction = classifier.predict(input_row)
