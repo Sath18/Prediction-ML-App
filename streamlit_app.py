@@ -84,7 +84,7 @@ with st.expander('Encoded Values'):
   y
 
 classifier = RandomForestClassifier()
-classifier.fit(X_raw, y)
+classifier.fit(df_penguins, y)
 
 prediction = classifier.predict(input_row)
 prediction_probability = classifier.predict_proba(input_row)
