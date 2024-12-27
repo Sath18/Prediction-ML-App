@@ -84,6 +84,9 @@ with st.expander('Encoded Values'):
   y
 
 classifier = RandomForestClassifier()
-classifier.fit(X_raw, Y)
+classifier.fit(X_raw, y)
 
 prediction = classifier.predict(input_row)
+prediction_probability = classifier.predict_proba(input_row)
+
+prediction_probability
