@@ -45,7 +45,7 @@ with st.sidebar:
   )
   gender = st.selectbox(
     'Gender',
-    ('Male','Female')
+    ('male','female')
   )
 
   data = {'island' : island,
@@ -63,5 +63,7 @@ with st.expander('Input Features'):
   input_df
 
 encode = ['island', 'sex']
+df_penguins = pd.get_dummies(input_penguins, prefix = encode)
+df_penguins[:1]
 
 
