@@ -71,6 +71,7 @@ def target_encoder(value):
 
 y = y_raw.apply(target_encoder)
 
+X = df_penguins[1:]
 input_row = df_penguins[:1]
 
 with st.expander('Input Features'):
@@ -84,7 +85,7 @@ with st.expander('Encoded Values'):
   y
 
 classifier = RandomForestClassifier()
-classifier.fit(df_penguins, y)
+classifier.fit(X, y)
 
 prediction = classifier.predict(input_row)
 prediction_probability = classifier.predict_proba(input_row)
