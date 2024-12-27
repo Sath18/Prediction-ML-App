@@ -64,7 +64,7 @@ df_penguins = pd.get_dummies(input_penguins, prefix = encode)
 target_mapper = {'Adiele': 0,
                  'Chinstrap' : 1,
                  'Gentoo' : 2}
-def target_encoder (value):
+def target_encoder(value):
   return target_mapper[value]
 
 y = y_raw.apply(target_encoder)
