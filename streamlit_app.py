@@ -67,6 +67,9 @@ target_mapper = {'Adiele': 0,
 def target_encoder (value):
   return target_mapper[value]
 
+y = y_raw.applt(target_encoder)
+y
+
 with st.expander('Input Features'):
   st.write('**Input Features of the Penguin**')
   input_df
