@@ -95,7 +95,7 @@ df_prediction_probability = pd.DataFrame(prediction_probability)
 df_prediction_probability.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 
 st.subheader('Predicted Species')
-st.dataframe(df_prediction_proba,
+st.dataframe(df_prediction_probability,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
