@@ -94,3 +94,6 @@ df_prediction_probability = pd.DataFrame(prediction_probability)
 df_prediction_probability.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 
 df_prediction_probability
+
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str(penguins_species[prediction][0]))
