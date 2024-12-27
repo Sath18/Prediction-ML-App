@@ -31,3 +31,7 @@ with st.sidebar:
     'Gender',
     ('Male','Female')
   )
+  bill_length_mm = st.slider(
+    'Bill Length (mm)',
+    32.1, 59.6, 43.9
+  )
