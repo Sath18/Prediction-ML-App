@@ -67,7 +67,7 @@ target_mapper = {'Adiele': 0,
 def target_encoder (value):
   return target_mapper[value]
 
-y = y_raw.applt(target_encoder)
+y = y_raw.apply(target_encoder)
 y
 
 with st.expander('Input Features'):
