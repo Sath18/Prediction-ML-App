@@ -27,3 +27,7 @@ with st.sidebar:
     'Island',
     ('Biscoe','Dream','Torgersen')
   )
+  gender = st.selectbox(
+    'Gender',
+    ('Male','Female')
+  )
